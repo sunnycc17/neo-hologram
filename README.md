@@ -1,5 +1,7 @@
 # React + TypeScript + Vite
 
+<a target="_blank" href="https://icons8.com/icon/2Bgtk06wKeTA/comet">Asteroid</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
