@@ -1,9 +1,9 @@
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 
 const HologramEffect = () => {
-  const mountRef = useRef(null);
+  const mountRef = useRef<HTMLDivElement | null>(null); // ✅ Explicit Type
 
   useEffect(() => {
     if (!mountRef.current) return;
@@ -23,7 +23,7 @@ const HologramEffect = () => {
     const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setClearColor(0x000000); // Black background
-    mount.appendChild(renderer.domElement);
+    mount.appendChild(renderer.domElement); // ✅ No more TS errors
 
     // Hologram Material (Wireframe with glow effect)
     const geometry = new THREE.TorusKnotGeometry(1, 0.3, 100, 16);
